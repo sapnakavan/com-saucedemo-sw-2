@@ -2,6 +2,7 @@ package testsuite;
 
 import browserfectory.BaseTest;
 import com.google.common.base.Verify;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -97,6 +98,10 @@ public class LoginTest extends BaseTest {
                 "ADD TO CART";
 
         Assert.assertEquals(expmess,accmess);
+    }
+    @After
+    public void teardown(){
+        closeBrowser();
     }
 
 
